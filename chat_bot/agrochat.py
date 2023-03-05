@@ -59,7 +59,7 @@ def get_response(intents_list, intents_json):
 
 app = Flask(__name__)
 
-@app.route('/chat', methods =['PUT'])
+@app.route('/chat', methods =['POST'])
 def chat():
     body = request.get_json(force=True)
     text = body['input']
